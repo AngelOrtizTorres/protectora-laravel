@@ -1,20 +1,22 @@
-# Protectora de Animales - Laravel Project
-## Caracteristicas principales
-### Gestion de Usuarios
+# 🐾 Protectora de Animales - Laravel Project
+Aplicación web desarrollada en Laravel para la gestión de una protectora de animales.
+Permite registrar usuarios, registrar animales y visualizar los datos almacenados en la base de datos mediante vistas simples y funcionales.
+## 📌 Caracteristicas principales
+### 👤 Gestion de Usuarios
 - Registro de nuevos usuarios.
 - Campos: username, email, telefono, contrasena, nombre, apellido, direccion y rol.
 - Contrasenas encriptadas con bcrypt.
 - Listado completo de usuarios.
-### Gestion de Animales
+### 🐶 Gestion de Mascotas
 - Registro de animales con nombre, raza y fecha de nacimiento.
 - Listado de animales almacenados en la base de datos.
-## Tecnologias utilizadas
+## 🚀 Tecnologias utilizadas
 - Laravel 12
 - PHP 8.3
 - MySQL
 - Blade Templates
 - Laragon
-## Instalacion y configuracion
+## 📁 Instalacion y configuracion
 ### 1. Clonar el repositorio
 ```
 git clone https://github.com/AngelOrtizTorres/protectora-laravel
@@ -44,16 +46,16 @@ php artisan key:generate
 ```
 php artisan migrate
 ```
-## Rutas principales
+## 🧭 Rutas principales
 - /registro/usuario
 - /registro/animal
 - /usuarios
 - /animales
-## Funcionalidades implementadas
+## 🛠 Funcionalidades implementadas
 - Registro de usuarios
 - Registro de animales
 - Listados con Blade
-## Proximas mejoras
+## 📌 Proximas mejoras
 - Login real
 - Roles y permisos
 - CRUD completo
