@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registro Usuarios</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-6">
-
+<x-app-layouts class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-6" title="Protectora | Registro de Usuarios">
     <h1 class="text-4xl font-bold text-gray-800 mb-8">
         Registro de Usuarios
     </h1>
@@ -78,17 +67,15 @@
     </form>
 
     <div class="mt-6 flex flex-col items-center gap-3">
-        <a href="{{ url('/login ') }}" class="text-blue-600 hover:underline">
+        <a href="{{ route('login') }}" class="text-blue-600 hover:underline">
             ¿Ya tienes una cuenta? Inicia sesión
         </a>
 
-        <a href="{{ url('/') }}">
+        <a href="{{ route('root') }}">
             <button type="button"
                     class="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-900 transition">
                 Volver
             </button>
         </a>
     </div>
-
-</body>
-</html>
+</x-app-layouts>

@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-6">
+<x-app-layouts class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-6" title="Protectora | Login">
 
     <h1 class="text-4xl font-bold text-gray-800 mb-8">
         Iniciar Sesión
     </h1>
 
-    <form method="POST" action="{{ url('/login') }}"
+    <form method="POST" action="{{ route('login') }}"
           class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md flex flex-col gap-5">
         @csrf
 
@@ -36,12 +26,10 @@
         </button>
     </form>
 
-    <a href="{{ url('/') }}" class="mt-6">
+    <a href="{{ route('root') }}" class="mt-6">
         <button type="button"
                 class="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-900 transition">
             Volver
         </button>
     </a>
-
-</body>
-</html>
+</x-app-layouts>
