@@ -1,0 +1,17 @@
+{
+    "greeting": "Hola",
+    "farewell": "Adiós",
+    "thank_you": "Gracias",
+    "welcome": "Bienvenido",
+    "good_morning": "Buenos días",
+    "good_night": "Buenas noches",
+    "please": "Por favor",
+    "yes": "Sí",
+    "no": "No",
+    "excuse_me": "Disculpe",
+    "Close": "Cerrar",
+    "Open": "Abrir",
+    "Save": "Guardar",
+    "Delete": "Eliminar",
+    "Edit": "Editar"
+}
