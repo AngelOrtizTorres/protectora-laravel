@@ -8,7 +8,7 @@ use App\Models\Animal;
 class AnimalController extends Controller {
     
     public function show() {
-        $animales = Animal::orderBy('id')->paginate(5); 
+        $animales = Animal::orderBy('id')->paginate(10); 
         return view('animal.index', compact('animales'));
     }
 

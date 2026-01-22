@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Animal;
+use App\Http\Requests\UserRequest;
+use App\Http\Requests\AnimalRequest;
 
 class AuthController extends Controller {
     
@@ -12,7 +14,8 @@ class AuthController extends Controller {
         return view('auth.register_user');
     }
 
-    public function registerUser(Request $request) {
+    public function registerUser(UserRequest $request) {
+
         // Asignación masiva
         User::create($request->only('username', 'email', 'telefono', 'password', 'nombre', 'apellido', 'direccion', 'rol'));
 
@@ -37,7 +40,7 @@ class AuthController extends Controller {
         return view('auth.register_animal');
     }
 
-    public function registerAnimal(Request $request) {
+    public function registerAnimal(AnimalRequest $request) {
 
         // Asignacion masiva
         Animal::create($request->only('nombre', 'raza', 'fechaNacimiento'));
