@@ -1,14 +1,14 @@
-<x-app-layouts class="bg-gray-100 min-h-screen p-8" title="Protectora | Usuarios">
+<x-app-layouts title="Protectora | Usuarios">
     <h1 class="text-4xl font-bold text-gray-800 text-center mb-10">
         Usuarios
     </h1>
 
-    <div class="overflow-x-auto max-w-6xl mx-auto">
+    <div class="overflow-x-auto mx-auto w-full max-w-6xl">
         <table class="w-full bg-white shadow-lg rounded-lg overflow-hidden">
             <thead class="bg-gray-800 text-white">
                 <tr>
-                    <th class="px-4 py-3 text-left">Usuario</th>
-                    <th class="px-4 py-3 text-left">Email</th>
+                    <th class="px-4 py-3 text-left w-1/2">Usuario</th>
+                    <th class="px-4 py-3 text-left w-1/2">Email</th>
                 </tr>
             </thead>
 
@@ -17,14 +17,14 @@
                     <tr class="border-b hover:bg-gray-100 transition">
                         <td class="px-4 py-3">{{ $user->username }}</td>
                         <td class="px-4 py-3">{{ $user->email }}</td>
-                        <td class="flex">
-                            <a href="{{ route('user.edit', $user) }}"><button>EDITAR</button></a>
+                        <td class="flex px-4 py-3">
+                            <a href="{{ route('user.edit', $user) }}"><span class="material-symbols-outlined">edit</span></a>
                             <form action="{{ route('user.destroy', $user) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
 
-                                <button type="'submit">
-                                    ELIMINAR
+                                <button type="submit">
+                                    <span class="material-symbols-outlined">delete</span>   
                                 </button>
                             </form>
                         </td>
@@ -32,7 +32,7 @@
                 @endforeach
             </tbody>
         </table>
-    </div>
+    </div><br>
     
     {{ $usuarios->links() }}
 

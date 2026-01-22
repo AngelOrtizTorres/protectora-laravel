@@ -1,4 +1,4 @@
-<x-app-layouts class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-6" title="Protectora | Editar Usuario">
+<x-app-layouts title="Protectora | Editar Usuario">
     <h1 class="text-4xl font-bold text-gray-800 mb-8">
         Editar Usuario
     </h1>
@@ -63,7 +63,7 @@
     </form>
 
     <div class="mt-6 flex flex-col items-center gap-3">
-        <a href="{{ route('root') }}">
+        <a href="{{ route('users') }}">
             <button type="button"
                     class="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-900 transition">
                 Volver

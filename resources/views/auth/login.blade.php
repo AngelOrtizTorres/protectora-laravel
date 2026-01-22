@@ -1,4 +1,4 @@
-<x-app-layouts class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-6" title="Protectora | Login">
+<x-app-layouts title="Protectora | Login">
 
     <h1 class="text-4xl font-bold text-gray-800 mb-8">
         Iniciar Sesión
@@ -24,12 +24,18 @@
                 class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
             Iniciar Sesión
         </button>
-    </form>
+    </form><br>
 
-    <a href="{{ route('root') }}" class="mt-6">
-        <button type="button"
-                class="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-900 transition">
-            Volver
-        </button>
-    </a>
+    <div class="mt-6 flex flex-col items-center gap-3">
+        <a href="{{ route('register.user') }}" class="text-blue-600 hover:underline">
+            ¿No tienes una cuenta? Regístrate
+        </a>
+        <a href="{{ route('root') }}">
+            <button type="button"
+                    class="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-900 transition">
+                Volver
+            </button>
+        </a>
+    </div>
+
 </x-app-layouts>

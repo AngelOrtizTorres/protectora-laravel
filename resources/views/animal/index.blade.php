@@ -1,9 +1,9 @@
-<x-app-layouts class="bg-gray-100 min-h-screen p-8" title="Protectora | Mascotas">
+<x-app-layouts title="Protectora | Mascotas">
     <h1 class="text-4xl font-bold text-gray-800 text-center mb-10">
         Mascotas
     </h1>
     
-    <div class="overflow-x-auto max-w-4xl mx-auto">
+    <div class="overflow-x-auto max-w-5xl w-full mx-auto">
         <table class="w-full bg-white shadow-lg rounded-lg overflow-hidden">
             <thead class="bg-green-700 text-white">
                 <tr>
@@ -19,14 +19,14 @@
                         <td class="px-4 py-3">{{ $animal->nombre }}</td>
                         <td class="px-4 py-3">{{ $animal->raza }}</td>
                         <td class="px-4 py-3">{{ $animal->fechaNacimiento }}</td>
-                        <td class="flex">
-                            <a href="{{ route('animal.edit', $animal) }}"><button>EDITAR</button></a>
+                        <td class="flex px-4 py-3">
+                            <a href="{{ route('animal.edit', $animal) }}"><span class="material-symbols-outlined">edit</span></a>
                             <form action="{{ route('animal.destroy', $animal) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
 
-                                <button type="'submit">
-                                    ELIMINAR
+                                <button type="submit">
+                                    <span class="material-symbols-outlined">delete</span>
                                 </button>
                             </form>
                         </td>
@@ -34,7 +34,7 @@
                 @endforeach
             </tbody>
         </table>
-    </div>
+    </div><br>
 
     {{ $animales->links() }}
     
